@@ -3,9 +3,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+    <title>Contact</title>
 </head>
-<body>
+
+<!--Page Styles-->
+<style>
+  body {
+    overflow: hidden;
+  }
+  #snow {
+    display: bfixed;
+  }
+</style>
+
+<!--testing-->
+<canvas id="snow" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+<script>
+  const canvas = document.getElementById('snow');
+  const ctx = canvas.getContext('2d');
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  let snowflakes = [];
+
+  function Snowflake() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 5 + 2;
+    this.speed = Math.random() * 2 + 1;
+  }
+
+  Snowflake.prototype.draw = function() {
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+    ctx.fill();
+  };
+
+  Snowflake.prototype.update = function() {
+    this.y += this.speed;
+    if (this.y > canvas.height) {
+      this.y = -this.size;
+      this.x = Math.random() * canvas.width;
+    }
+  };
+
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (let i = 0; i < snowflakes.length; i++) {
+      snowflakes[i].draw();
+      snowflakes[i].update();
+    }
+    requestAnimationFrame(animate);
+  }
+
+  for (let i = 0; i < 100; i++) {
+    snowflakes.push(new Snowflake());
+  }
+
+  animate();
+</script>
+
+<body class="bg-gray-100">
     
 
     <!--Main-->
@@ -33,7 +93,7 @@
                 <a href="../index.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
             </li>
 
-            <!--About-->
+            <!--Lessons-->
             <li>
                 <a href="lessons.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Lessons</a>
             </li>
@@ -51,6 +111,26 @@
 
 
 
+<!--footer-->
+<footer class="bg-gray-900 text-white p-4 mt-20 fixed bottom-0 w-full">
+    <div class="container mx-auto flex flex-wrap justify-between items-center">
+        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
+            <h5 class="text-lg font-bold mb-2">About Us</h5>
+            <p class="text-sm">AP US Government is a website designed to provide resources and information for students taking the AP US Government course.</p>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
+            <h5 class="text-lg font-bold mb-2">Quick Links</h5>
+            <ul class="list-none mb-0">
+                <li class="mb-2"><a href="../index.html" class="text-sm hover:text-blue-500">Home</a></li>
+                <li class="mb-2"><a href="lessons.html" class="text-sm hover:text-blue-500">Lessons</a></li>
+                <li class="mb-2"><a href="contact.html" class="text-sm hover:text-blue-500">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container mx-auto text-center mt-4">
+        <p class="text-sm">&copy; 2023 AP US Government. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
