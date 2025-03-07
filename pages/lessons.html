@@ -3,12 +3,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Lessons</title>
+    <title>Document</title>
 </head>
 
-<!--DONT TOUCH THIS SECTION!-->
+    <!--DONT TOUCH THIS SECTION!-->
 <!--This is what makes the website look nice, and fit on iphone-->
 <style>
+
+
     @media only screen and (max-width: 768px) {
     html, body {
         width: 100%;
@@ -55,15 +57,6 @@
 }
 </style>
 
-<!--Page Styles-->
-<style>
-  body {
-    overflow: auto; /* Allow scrolling */
-  }
-  #snow {
-    display: bfixed;
-  }
-</style>
 
 <!--testing-->
 <canvas id="snow" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
@@ -115,6 +108,9 @@
 </script>
 
 <body class="bg-gray-100">
+    
+
+    <!--Main-->
 
     <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
   <div class="container flex flex-wrap justify-between items-center mx-auto">
@@ -125,28 +121,28 @@
     </a>
 
     <!--Mobile Navigation-->
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 fo[...]
+    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
-        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM[...]
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
     </button>
 
     <!--Desktop Navigation-->
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gr[...
+        <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
 
             <!--Home-->
             <li>
-                <a href="../index.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark[...
+                <a href="../index.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent" aria-current="page">Home</a>
             </li>
 
             <!--Lessons-->
             <li>
-                <a href="lessons.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:[...
+                <a href="lessons.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Lessons</a>
             </li>
 
             <!--Contact-->
             <li>
-                <a href="contact.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark[...
+                <a href="contact.html" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
             </li>
 
         </ul>
@@ -155,124 +151,105 @@
 </nav>
 
 
-
-    <!--Main-->
-
-
-
-
-    <div class="container mx-auto p-4 pt-6 mt-20">
-    <h1 class="text-3xl font-bold mb-4">Lessons</h1>
-    <div class="flex flex-wrap justify-center mb-4">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4" onclick="showUnit1Lessons()">Unit 1</button>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4" onclick="showUnit2Lessons()">Unit 2</button>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4" onclick="showUnit3Lessons()">Unit 3</button>
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-r" onclick="showUnit4Lessons()">Unit 4</button>
+<div class="container mx-auto p-4 md:p-6 lg:p-8 xl:p-10 bg-white rounded-lg shadow-md dark:bg-gray-800 mt-20">
+    <!-- Your content here -->
+<div class="container mx-auto p-4 md:p-6 lg:p-8 xl:p-10 bg-gray-800 rounded-lg shadow-md dark:bg-gray-800 mt-20">
+    <h2 class="text-4xl font-bold mb-4 text-white">AP US Government Lessons</h2>
+    <div class="flex justify-center mb-4">
+        <select id="lesson-select" class="bg-gray-900 text-white p-2 rounded-lg shadow-md">
+            <option value="all">All Lessons</option>
+            <option value="1">Lesson 1</option>
+            <option value="2">Lesson 2</option>
+            <option value="3">Lesson 3</option>
+            <option value="4">Lesson 4</option>
+            <option value="5">Lesson 5</option>
+            <option value="6">Lesson 6</option>
+        </select>
     </div>
-    <div id="lessons" class="flex flex-wrap justify-center"></div>
+    <div id="lesson-content" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <!-- Lesson content will be displayed here -->
+    </div>
+    <div id="lesson-topics" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-10">
+    <div class="bg-gray-900 p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold mb-2 text-white">Lesson 1 Topics</h3>
+        <div class="grid grid-cols-1 gap-2">
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">Introduction to AP US Government</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">The Constitution</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">The Bill of Rights</a>
+        </div>
+    </div>
+    <div class="bg-gray-900 p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold mb-2 text-white">Lesson 2 Topics</h3>
+        <div class="grid grid-cols-1 gap-2">
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">The Legislative Branch</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">The Executive Branch</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">The Judicial Branch</a>
+        </div>
+    </div>
+    <div class="bg-gray-900 p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold mb-2 text-white">Lesson 3 Topics</h3>
+        <div class="grid grid-cols-1 gap-2">
+            <a href="/pages/lessons/topics/fop.html" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">Freedom Of Press</a>
+        </div>
+    </div>
+    <div class="bg-gray-900 p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold mb-2 text-white">Lesson 4 Topics</h3>
+        <div class="grid grid-cols-1 gap-2">
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">Public Policy</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">Economic Policy</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">Foreign Policy</a>
+        </div>
+    </div>
+    <div class="bg-gray-900 p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold mb-2 text-white">Lesson 5 Topics</h3>
+        <div class="grid grid-cols-1 gap-2">
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">Interest Groups</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">Political Parties</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">Elections</a>
+        </div>
+    </div>
+    <div class="bg-gray-900 p-4 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold mb-2 text-white">Lesson 6 Topics</h3>
+        <div class="grid grid-cols-1 gap-2">
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">The Media</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">Public Opinion</a>
+            <a href="#" class="bg-gray-700 p-2 rounded-lg shadow-md hover:bg-gray-600 text-sm text-white">The Role of the Citizen</a>
+        </div>
+    </div>
+</div>
+</div>
 </div>
 
 <script>
-    function showUnit1Lessons() {
-        document.getElementById("lessons").innerHTML = `
-            <div class="w-full md:w-1/2 xl:w-1/3 p-6">
-                <div class="bg-white rounded shadow-md p-4">
-                    <h2 class="text-lg font-bold mb-2">No lessons available in Unit 1</h2>
-                    <p class="text-sm">Please check back later for available lessons.</p>
-                </div>
-            </div>
-            <!-- Add more lessons from Unit 1 here -->
-        `;
-    }
+    const lessonSelect = document.getElementById('lesson-select');
+    const lessonTopics = document.getElementById('lesson-topics');
+    const lessonContent = document.getElementById('lesson-content');
 
-    function showUnit2Lessons() {
-        document.getElementById("lessons").innerHTML = `
-            <div class="w-full md:w-1/2 xl:w-1/3 p-6">
-                <div class="bg-white rounded shadow-md p-4">
-                    <h2 class="text-lg font-bold mb-2">No lessons available in Unit 2</h2>
-                    <p class="text-sm">Please check back later for available lessons.</p>
-                </div>
-            </div>
-            <!-- Add more lessons from Unit 2 here -->
-        `;
-    }
+    lessonSelect.addEventListener('change', (e) => {
+        const selectedLesson = e.target.value;
+        const topicBoxes = lessonTopics.children;
 
-    function showUnit3Lessons() {
-        document.getElementById("lessons").innerHTML = `
-<a href="/pages/lessons/scc.html" class="w-full md:w-1/2 xl:w-1/3 p-6 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-    <div class="bg-white rounded shadow-md p-4">
-        <h2 class="text-lg font-bold mb-2">Supreme Court Cases</h2>
-        <p class="text-sm">This lesson covers the role of non-profit organizations in the US government system and their impact on public policy.</p>
-    </div>
-</a>
-<a href="/pages/lessons/aar.html" class="w-full md:w-1/2 xl:w-1/3 p-6 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-    <div class="bg-white rounded shadow-md p-4">
-        <h2 class="text-lg font-bold mb-2">1st Amendment and Religion</h2>
-        <p class="text-sm">This lesson covers the role of non-profit organizations in the US government system and their impact on public policy.</p>
-    </div>
-</a>
-<a href="/pages/lessons/fsp.html" class="w-full md:w-1/2 xl:w-1/3 p-6 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-    <div class="bg-white rounded shadow-md p-4">
-        <h2 class="text-lg font-bold mb-2">Free Speech Presentation</h2>
-        <p class="text-sm">This lesson covers the role of non-profit organizations in the US government system and their impact on public policy.</p>
-    </div>
-</a>
-<a href="/pages/lessons/npo.html" class="w-full md:w-1/2 xl:w-1/3 p-6 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-    <div class="bg-white rounded shadow-md p-4">
-        <h2 class="text-lg font-bold mb-2">Non-Profit Organizations</h2>
-        <p class="text-sm">This lesson covers the role of non-profit organizations in the US government system and their impact on public policy.</p>
-    </div>
-</a>
-<a href="/pages/lessons/fop.html" class="w-full md:w-1/2 xl:w-1/3 p-6 cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
-    <div class="bg-white rounded shadow-md p-4">
-        <h2 class="text-lg font-bold mb-2">Freedom Of Press</h2>
-        <p class="text-sm">This lesson covers the freedoms of the press under the first amendment.</p>
-    </div>
-</a>
-            <!-- Add more lessons from Unit 3 here -->
-        `;
-    }
-
-    function showUnit4Lessons() {
-        document.getElementById("lessons").innerHTML = `
-            <div class="w-full md:w-1/2 xl:w-1/3 p-6">
-                <div class="bg-white rounded shadow-md p-4">
-                    <h2 class="text-lg font-bold mb-2">No lessons available in Unit 4</h2>
-                    <p class="text-sm">Please check back later for available lessons.</p>
-                </div>
-            </div>
-            <!-- Add more lessons from Unit 4 here -->
-        `;
-    }
-
-// Get the current unit from local storage
-let currentUnit = localStorage.getItem('currentUnit');
-
-// If there is a current unit, show it
-if (currentUnit) {
-    window['showUnit' + currentUnit + 'Lessons']();
-}
-
-// Add event listeners to the unit buttons
-document.querySelectorAll('.bg-blue-500').forEach(button => {
-    button.addEventListener('click', () => {
-        // Get the unit number from the button's onclick attribute
-        let unitNumber = button.getAttribute('onclick').match(/showUnit(\d+)Lessons\(\)/)[1];
-
-        // Store the unit number in local storage
-        localStorage.setItem('currentUnit', unitNumber);
+        if (selectedLesson === 'all') {
+            for (let i = 0; i < topicBoxes.length; i++) {
+                topicBoxes[i].style.display = 'block';
+            }
+        } else {
+            for (let i = 0; i < topicBoxes.length; i++) {
+                if (topicBoxes[i].children[0].textContent.includes(`Lesson ${selectedLesson}`)) {
+                    topicBoxes[i].style.display = 'block';
+                } else {
+                    topicBoxes[i].style.display = 'none';
+                }
+            }
+        }
     });
-});
 </script>
-    
+
+
+<div class="container mx-auto p-4 md:p-6 lg:p-8 xl:p-10 bg-white rounded-lg shadow-md dark:bg-gray-800 mt-20" style="visibility: hidden;">
   
+</div>
 
-
-    <!----------------------------------->
-
-
-
-<!--footer-->
 <footer class="bg-gray-900 text-white p-4 mt-20 w-full">
     <div class="container mx-auto flex flex-wrap justify-between items-center">
         <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4 md:mb-0">
